@@ -1,0 +1,35 @@
+
+
+  
+    
+
+
+<!-- app.component.html -->
+<div class="grid-container">
+    <div *ngFor="let row of users; let rowIndex = index" class="grid-row">
+      <div *ngFor="let user of users" class="grid-cell">
+        <div class="image-placeholder"></div>
+        <p>ID: {{ user._id }}</p>
+        <p>Username: {{ user.username }}</p>
+        <p>Email: {{ user.email }}</p>
+        <button class="btn btn-primary">Creer un Rendez-Vous</button>
+      </div>
+    </div>
+  </div>
+  
+
+ 
+    
+ 
+
+
+ 
+
+       
+
+
+    
+
+
+
+      

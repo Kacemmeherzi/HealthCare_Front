@@ -1,0 +1,52 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  /* app.component.css */
+/* app.component.css */
+/* app.component.css */
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px;
+  }
+  
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-cell {
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color for contrast */
+    border: 1px solid #ccc;
+    padding: 40px 10px 10px; /* Adjust padding to make space for the placeholder */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Enable positioning for the placeholder */
+  }
+  
+  .image-placeholder {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    background-color: #555; /* Dark grey placeholder color */
+    border-radius: 50%; /* Make the placeholder round */
+    position: absolute;
+    top: -40px; /* Adjust to center the placeholder vertically */
+    left: 50%;
+    transform: translateX(-50%); /* Center the placeholder horizontally */
+    border: 2px solid #fff; /* Optional: Add a border around the placeholder */
+  }
+  

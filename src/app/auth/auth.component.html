@@ -1,0 +1,12 @@
+<!-- app.component.html -->
+<ng-container *ngIf="!this.islogged()">
+<div *ngIf="showLogin">
+    <!-- Login component -->
+    <app-login (switchToRegistration)="toggleForm()"></app-login>
+  </div>
+  
+  <div *ngIf="!showLogin">
+    <app-signup (switchToLoginevent)="toggleForm()"></app-signup>
+
+  </div>
+</ng-container>

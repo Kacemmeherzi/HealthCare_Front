@@ -1,0 +1,49 @@
+
+
+   
+    
+
+<div class="text-center">
+    
+    <main class="form-signin py-5 px-2">
+      <form   [formGroup]="myForm"   (ngSubmit)="onSubmit()">
+        <img class="mb-4" src="/assets/mainIcon.png" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Sign up</h1>
+    
+        <div class="form-floating ">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="fname">
+          <label for="floatingInput"> Nom de la famille</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="lname">
+            <label for="floatingInput">Prenom</label>
+          </div> 
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+            <label for="floatingInput">Adresse Email</label>
+          </div> 
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="password">
+            <label for="floatingInput">Mot de passe </label>
+          </div> 
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="cpassword">
+            <label for="floatingInput">Confirmation de mdp</label>
+          </div>
+          <label>
+            <input type="radio" formControlName="selection" value="docteur_role"> Docteur 
+          </label>
+          <label>
+            <input type="radio" formControlName="selection" value="patient_role"> Patient 
+          </label>
+         
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+        <p class="py-2">Already with us ?<button class="w-20 btn btn-sm btn-secondary " (click)="switchToLogin()">Login </button></p>
+      </form>
+    </main> 
+</div>
+        
+        
+   
+    
+    

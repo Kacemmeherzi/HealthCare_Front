@@ -1,6 +1,10 @@
 export interface User {
-    _id : string ;
+    id : string ;
     username : string ; 
-    email : string 
+    name : string ; 
+    specialite : string ;
+
+    email : string ;
+    number : string
     }
     

@@ -10,7 +10,11 @@ import { AuthService } from '../services/auth.service';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
- constructor(public authservice :  AuthService) {
+ constructor(private authservice :  AuthService) {
 
+}
+
+Logout():void {
+this.authservice.logout()
 }
 }

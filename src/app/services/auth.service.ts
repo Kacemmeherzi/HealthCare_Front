@@ -14,6 +14,9 @@ export class AuthService{
     isAuthenticated(): boolean {
       return !!localStorage.getItem('token');
     }
+    userRole() : String {
+        return localStorage.getItem('userRole')
+    };
     login(email: string, password: string):Observable<HttpResponse<any>> {
       
       const headers = new HttpHeaders({
@@ -45,6 +48,7 @@ export class AuthService{
   
       localStorage.setItem("userid",data.user._id)
       localStorage.setItem("token",data.token)
+
   
     }
 }

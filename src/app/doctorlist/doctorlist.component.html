@@ -1,24 +1,38 @@
 
+<div class="container mt-4 ">
+  <!-- Search Input -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Rechercher un docteur" 
+        [(ngModel)]="searchTerm"
+        (input)="searchDoctor()"
+      >
+    </div>
+  </div>
 
   
     
 
 
-<!-- app.component.html -->
 <div class="grid-container">
-    <div *ngFor="let row of users; let rowIndex = index" class="grid-row">
-      <div *ngFor="let user of users" class="grid-cell">
-        <div class="image-placeholder"></div>
-        <p>ID: {{ user._id }}</p>
-        <p>Username: {{ user.username }}</p>
-        <p>Email: {{ user.email }}</p>
-        <button class="btn btn-primary">Creer un Rendez-Vous</button>
-      </div>
+  <div *ngFor="let user of users" class="grid-item">
+    <div class="image-holder">
+      <img src="/assets/medecin.png" alt="Circular Image">
     </div>
-  </div>
-  
+    <p class="card-text">
+      <strong>Docteur(e):</strong> {{ user.name }}<br>
+      <strong>Email:</strong> {{ user.email }}
+      <strong>specialité:</strong> {{ user.specialite }}
 
- 
+    </p>
+     <button class="btn btn-primary m-3">Creer Rendez-Vous</button>
+
+  </div>
+</div>
+
     
  
 

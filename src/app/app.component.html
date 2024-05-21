@@ -3,12 +3,12 @@
 </ng-container>
 
 
-<ng-container *ngIf="this.isAuthed()">
+<ng-container *ngIf="this.isAuthed()&&this.isDoctor()">
 <app-dashboard></app-dashboard>
 
 </ng-container>
 
-<ng-container *ngIf="this.isAuthed()">
+<ng-container *ngIf="this.isAuthed()&&this.isPatient()">
 <app-home></app-home>
     
 </ng-container>

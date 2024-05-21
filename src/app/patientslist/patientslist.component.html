@@ -1,1 +1,53 @@
-<h1>hhhhhhhhhhhhhhhh</h1>
+
+
+<div class="container mt-4 ">
+  <!-- Search Input -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Rechercher un patient" 
+        [(ngModel)]="searchTerm"
+        (input)="searchPatient()"
+      >
+    </div>
+  </div>
+  
+    
+
+
+<div class="grid-container">
+  <div *ngFor="let user of users" class="grid-item">
+    <div class="image-holder">
+      <img src="/assets/homme.png" alt="Circular Image">
+    </div>
+    <p class="card-text">
+      <strong>Patient(e):</strong> {{ user.name }}<br>
+      <strong>Email:</strong> {{ user.email }}
+      <strong>Numero:</strong> {{ user.number }}
+
+      
+
+    </p>
+    <div class="d-flex justify-content-center mt-2">
+      <button class="btn btn-outline-primary mx-2" (click)="viewUserInfo(user)">Plus D'infos</button>
+      <button class="btn btn-outline-success mx-2">Dossier Medicale</button>
+    </div>
+  </div>
+</div>
+
+    
+ 
+
+
+ 
+
+       
+
+
+    
+
+
+
+      

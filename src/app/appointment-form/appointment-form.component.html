@@ -1,0 +1,44 @@
+
+
+   <div class="text-center">
+    <h1>Rendez-Vous Formulaire</h1>
+   </div>
+        
+ <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="doctorSelect" class="form-label">Select Doctor</label>
+        <select formControlName="doctor" class="form-select" id="doctorSelect">
+          <option value="">Select Doctor</option>
+          <option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.name }}</option>
+        </select>
+        <div *ngIf="appointmentForm.get('doctor').invalid && appointmentForm.get('doctor').touched" class="text-danger">
+          Please select a doctor.
+        </div>
+      </div>
+    <div class="mb-3">
+      <label for="maladieInput" class="form-label">Maladie</label>
+      <input formControlName="maladie" type="text" class="form-control" id="maladieInput" placeholder="Enter Maladie">
+      <div *ngIf="appointmentForm.get('maladie').invalid && appointmentForm.get('maladie').touched" class="text-danger">
+        Please enter maladie.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="descriptionTextarea" class="form-label">Description</label>
+      <textarea formControlName="description" class="form-control" id="descriptionTextarea" rows="3" placeholder="Enter Description"></textarea>
+      <div *ngIf="appointmentForm.get('description').invalid && appointmentForm.get('description').touched" class="text-danger">
+        Please enter description.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="dateInput" class="form-label">Date</label>
+      <input formControlName="date" type="date" class="form-control" id="dateInput">
+      <div *ngIf="appointmentForm.get('date').invalid && appointmentForm.get('date').touched" class="text-danger">
+        Please enter a valid date.
+      </div>
+    </div>
+    <div class="text-center mb-3">
+    <button type="submit" class="btn btn-primary " [disabled]="appointmentForm.invalid">Submit</button></div>
+  </form>
+  
+    
+    

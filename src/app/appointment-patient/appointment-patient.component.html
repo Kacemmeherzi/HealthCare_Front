@@ -1,0 +1,22 @@
+<!-- src/app/app.component.html -->
+<div class="container mt-4 text-center">
+    <div class="row">
+      <div *ngFor="let appointment of appointments" class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ appointment.date }}</h5>
+            <p class="card-text">
+              <strong>Doctor:</strong> {{ appointment.doctor }}<br>
+              <strong>Date:</strong> {{ appointment.date }}
+              <strong>description:</strong> {{ appointment.description }}
+
+            </p>
+            <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-outline-danger">Annuler</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

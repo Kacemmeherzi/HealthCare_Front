@@ -1,30 +1,52 @@
 import { Component } from '@angular/core';
 import { User } from '../models/User';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-doctorlist',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './doctorlist.component.html',
   styleUrl: './doctorlist.component.css'
 })
 export class DoctorlistComponent {
+  constructor(private router : Router){}
+  searchTerm: string = '';
+
   users: User[] = [
     {
-      _id: '1',
+      id: '1',
       username: 'john_doe',
-      email: 'john@example.com'
+      email: 'john@example.com',
+      specialite: "blblb",
+      name : "Dhia"
+      ,number : "50555555"
+
+
+    },{
+      id: '1',
+      username: 'john_doe',
+      email: 'john@example.com',
+      specialite: "blblb",
+      name : "Dhia"      ,number : "50555555"
+
+
+    },{
+      id: '1',
+      username: 'john_doe',
+      email: 'john@example.com',
+      specialite: "blblb",
+      name : "Dhia"      ,number : "50555555"
+
+
     },
-    {
-      _id: '2',
-      username: 'jane_smith',
-      email: 'jane@example.com'
-    },
-    {
-      _id: '3',
-      username: 'alice_jones',
-      email: 'alice@example.com'
-    }
   ];
+  navigateToUserForm(user : User) {
+    console.log(user);
+    
+    this.router.navigate(['/user-form'], { queryParams: { user: JSON.stringify(user) } });
+  }
+  searchDoctor() {}
 }

@@ -30,13 +30,14 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="cpassword">
             <label for="floatingInput">Confirmation de mdp</label>
           </div>
-          <label>
-            <input type="radio" formControlName="selection" value="docteur_role"> Docteur 
+          <div >
+          <label class=" p-2">
+            <input class="p-2" type="radio" formControlName="selection" value="docteur_role"> Docteur 
           </label>
-          <label>
-            <input type="radio" formControlName="selection" value="patient_role"> Patient 
+          <label class=" p-2">
+            <input class="p-2" type="radio" formControlName="selection" value="patient_role"> Patient 
           </label>
-         
+        </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
         <p class="py-2">Already with us ?<button class="w-20 btn btn-sm btn-secondary " (click)="switchToLogin()">Login </button></p>
       </form>

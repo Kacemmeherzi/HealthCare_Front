@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './services/auth.service';
 import { CommonModule } from '@angular/common';
+import { ReturnStatement } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
@@ -22,4 +23,10 @@ export class AppComponent {
 
  isAuthed() : boolean {
  return this.authservice.isAuthenticated() }
+ isDoctor () : boolean {
+return this.authservice.userRole()==="doctor" 
+} 
+isPatient () : boolean {
+  return this.authservice.userRole()==="patient" 
+  } 
 }
